@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TV Maze Show</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  <script defer src="/main.js"></script></head>
+  <body>
+    <header>
+      <div class="navbar">
+        <a href="#">
+          <img src="./assets/images/tv-logo.png" alt="tvlogo" class="tv-logo" />
+        </a>
+        <nav class="mobile-nav-menu">
+          <ion-icon name="menu"></ion-icon>
+          <!-- <i class="fa-solid fa-bars hamburger mobile-menu"></i> -->
+          <ul class="mobile-menu-items">
+            <li class="nav-close">
+              <ion-icon name="close"></ion-icon>
+            </li>
+            <li class="nav-item home-link">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item menu-link">
+              <a class="nav-link" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item contact-link">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="desktop-menu">
+          <ul class="desktop-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="offers-headline" id="menu">
+        <h1>
+          Greetings! You've come to the right place for your ultimate
+          entertainment
+        </h1>
+        <p class="m-0">Select your favorite TV Show and Enjoy</p>
+        <p>Here, we have <b class="movie-counter">(0)</b> movies</p>
+      </section>
+
+      <section class="movies-content"></section>
+      <section class="popup-window hidden"></section>
+    </main>
+    <footer id="contact">
+      <small
+        >&copy; Copyright 2023 Created by Stanley Kibor and Shaheryar Abid.
+        Rights reserved</small
+      >
+    </footer>
+  </body>
+</html>
