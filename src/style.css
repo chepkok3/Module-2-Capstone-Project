@@ -30,3 +30,20 @@ li {
   font-weight: 800;
   color: white;
 }
+
+body > footer {
+  position: sticky;
+  top: 100vh;
+  border: 2px solid black;
+  padding: 16px;
+  margin: 12px;
+  margin-top: 40rem;
+}
+
+.footer {
+  padding: 1.5em 2em;
+  font-size: 2em;
+  background-color: #10141a;
+  color: #d2d1d3;
+  border: 2px solid;
+}
