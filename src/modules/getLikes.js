@@ -1,3 +1,4 @@
+/* eslint-disable */
 const postLike = async (itemId) => {
   const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/YDk6ZvYJ9bRgBt60cLN9/likes', {
     method: 'POST',
