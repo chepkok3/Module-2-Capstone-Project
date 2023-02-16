@@ -60,12 +60,8 @@ const init = async () => {
     commentbtn.addEventListener('click', (e) => {
       e.preventDefault();
       popUpSection.classList.remove('hidden');
-      // showPopup(mealWithLike.idMeal);
     });
   });
-  // const totalItems = ItemsCounter();
-  // const itemsCounterEl = document.querySelector('.items-counter');
-  // itemsCounterEl.innerHTML = `(${totalItems})`;
 };
 
 init();
