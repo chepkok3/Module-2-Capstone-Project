@@ -1,6 +1,7 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap');
+
+* {
   margin: 0;
   padding: 0;
 }
@@ -19,7 +20,7 @@ ul {
   list-style: none;
 }
 
-.logo{
+.logo {
   width: 80px;
 }
 
@@ -65,7 +66,7 @@ ul {
   align-items: center;
 }
 
-.meal-desc{
+.meal-desc {
   align-items: center;
   display: flex;
   width: 100%;

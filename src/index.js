@@ -9,7 +9,6 @@ const mealsSection = document.querySelector('.meals-section');
 const popUpSection = document.querySelector('.popup-section');
 const parser = new DOMParser();
 
-
 const init = async () => {
   const likesArray = await getLikes();
   const mealsArray = await getMeals();
@@ -61,12 +60,12 @@ const init = async () => {
     commentbtn.addEventListener('click', (e) => {
       e.preventDefault();
       popUpSection.classList.remove('hidden');
-      showPopup(mealWithLike.idMeal);
+      // showPopup(mealWithLike.idMeal);
     });
   });
-  const totalItems = ItemsCounter();
-  const itemsCounterEl = document.querySelector('.items-counter');
-  itemsCounterEl.innerHTML = `(${totalItems})`;
+  // const totalItems = ItemsCounter();
+  // const itemsCounterEl = document.querySelector('.items-counter');
+  // itemsCounterEl.innerHTML = `(${totalItems})`;
 };
 
 init();
