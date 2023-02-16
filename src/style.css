@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap');
 
 * {
@@ -112,9 +111,8 @@ ul {
   font-family: 'Roboto', sans-serif;
 }
 
-/* Comment section */
-
-.popup-wrapper {
+/* comments-styling */
+.popup-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -143,7 +141,7 @@ ul {
   mix-blend-mode: multiply;
 }
 
-.popup-details {
+.modal-info {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -153,19 +151,20 @@ ul {
   float: right;
 }
 
-.popup-img {
+.modal-popup-img {
   width: 65%;
-  height: 50vh;
+  height: 80vh;
   filter: drop-shadow(2px 4px 6px black);
   border-radius: 10px;
 }
 
-.popup-desc {
+.meal-description {
   display: flex;
   flex-direction: column;
   width: 60%;
   font-size: 1.1em;
   padding: 2.5em 0;
+  gap: 12px;
 }
 
 h3 {
@@ -178,29 +177,32 @@ h3 {
   letter-spacing: 2px;
 }
 
-.popup-desc b {
+.meal-description b {
   color: #e1362c;
-  letter-spacing: 3px;
+  letter-spacing: 6px;
   font-size: 1.2em;
   filter: drop-shadow(2px 4px 6px black);
 }
 
-.meal-links {
-  display: flex;
-  gap: 2em;
-  width: 60%;
+.more-info-links button {
+  padding: 6px;
+  background-color: white;
 }
 
-.meal-links a {
-  color: white;
+.more-info-links a {
   text-decoration: none;
+  color: #e1362c;
+  background-color: transparent;
 }
 
-.popup-desc ul {
+.meal-description ul {
   list-style-type: circle;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.popup-desc li {
+.meal-description li {
   letter-spacing: 3px;
   font-style: italic;
   color: #d2d1d3;
@@ -219,7 +221,7 @@ h3 {
   margin-left: 6px;
 }
 
-.meal-comments {
+.user-comments {
   width: 80%;
   display: flex;
   flex-direction: column;
