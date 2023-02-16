@@ -2,9 +2,6 @@ import './style.css';
 import getMeals from './modules/getMeals.js';
 import { getLikes, postLike } from './modules/getLikes.js';
 
-const mobileMenuItem = document.querySelector('.mobile-menu-item');
-const mobileMenu = document.querySelector('.mobile-menu');
-const closeBtn = document.querySelector('.x-mark');
 const mealsSection = document.querySelector('.meals-section');
 const popUpSection = document.querySelector('.popup-section');
 const parser = new DOMParser();
@@ -65,21 +62,3 @@ const init = async () => {
 };
 
 init();
-
-mobileMenu.addEventListener('click', () => {
-  mobileMenuItem.style.display = 'flex';
-});
-
-closeBtn.addEventListener('click', () => {
-  mobileMenuItem.style.display = 'none';
-});
-
-const mobileLink = Array.from(
-  document.getElementsByClassName('mobile-link'),
-);
-
-mobileLink.forEach((link) => {
-  link.addEventListener('click', () => {
-    mobileMenuItem.style.display = 'none';
-  });
-});
