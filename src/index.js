@@ -1,5 +1,5 @@
-/* eslint-disable */
 import './style.css';
+import displayModal from './modules/popUp.js';
 import getMeals from './modules/getMeals.js';
 import { getLikes, postLike } from './modules/getLikes.js';
 
@@ -12,7 +12,9 @@ const init = async () => {
   const mealsArray = await getMeals();
 
   const combinedArray = mealsArray.meals.map((meal) => {
-    const likeForThisMeal = likesArray.filter((likeObj) => likeObj.item_id === meal.idMeal);
+    const likeForThisMeal = likesArray.filter(
+      (likeObj) => likeObj.item_id === meal.idMeal,
+    );
     return {
       strMealThumb: meal.strMealThumb,
       strMeal: meal.strMeal,
@@ -37,10 +39,11 @@ const init = async () => {
         </div>
       </div>`;
 
-    const stringElement = parser.parseFromString(string, 'text/html').body.firstChild;
+    const stringItem = parser.parseFromString(string, 'text/html').body
+      .firstChild;
 
-    const likeBtn = stringElement.querySelector('.like-btn');
-    const likeEl = stringElement.querySelector('.likes');
+    const likeBtn = stringItem.querySelector('.like-btn');
+    const likeEl = stringItem.querySelector('.likes');
 
     likeBtn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -52,8 +55,14 @@ const init = async () => {
       likeEl.style.color = '#e1362c';
     });
 
-    mealsSection.append(stringElement);
+    mealsSection.append(stringItem);
 
+    const commentbtn = stringItem.querySelector('.comment-btn');
+    commentbtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      popUpSection.classList.remove('hidden');
+      displayModal(mealWithLike.idMeal);
+    });
   });
 };
 

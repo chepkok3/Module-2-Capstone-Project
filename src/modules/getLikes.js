@@ -1,20 +1,24 @@
-/* eslint-disable */
 const postLike = async (itemId) => {
-  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/YDk6ZvYJ9bRgBt60cLN9/likes', {
-    method: 'POST',
-    body: JSON.stringify({
-      item_id: itemId,
-    }),
-    headers: {
-      'Content-Type': 'application/json',
+  const response = await fetch(
+    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/YDk6ZvYJ9bRgBt60cLN9/likes',
+    {
+      method: 'POST',
+      body: JSON.stringify({
+        item_id: itemId,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
     },
-  });
+  );
   const responseText = await response.text();
   return responseText;
 };
 
 const getLikes = async () => {
-  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/YDk6ZvYJ9bRgBt60cLN9/likes');
+  const response = await fetch(
+    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/YDk6ZvYJ9bRgBt60cLN9/likes',
+  );
   const responseJSON = await response.json();
   return responseJSON;
 };
