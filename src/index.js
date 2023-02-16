@@ -54,11 +54,6 @@ const init = async () => {
 
     mealsSection.append(stringElement);
 
-    const commentbtn = stringElement.querySelector('.comment-btn');
-    commentbtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      popUpSection.classList.remove('hidden');
-    });
   });
 };
 
