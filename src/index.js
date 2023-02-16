@@ -1,3 +1,4 @@
+/* eslint-disable */
 import './style.css';
 import getMeals from './modules/getMeals.js';
 import { getLikes, postLike } from './modules/getLikes.js';
