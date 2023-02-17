@@ -1,5 +1,5 @@
 const commentsCounter = () => {
-  const commentSection = document.querySelector('.meal-comments');
+  const commentSection = document.querySelector('.user-comments');
   if (commentSection) {
     return commentSection.children.length;
   }
