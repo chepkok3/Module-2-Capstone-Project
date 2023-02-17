@@ -62,6 +62,11 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+
+- [Walkthrough Video](https://drive.google.com/file/d/1h4LguA7PzH3N29moBlTFeM7GuN_YHS3t/view?usp=sharing)
+
+
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
@@ -137,6 +142,7 @@ Feel free to check the [issues page](https://github.com/chepkok3/Module-2-Capsto
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ⭐️ Show your support <a name="support"></a>
+
 
 If you like this project please give me stars rating
 
