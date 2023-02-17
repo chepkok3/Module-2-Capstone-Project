@@ -1,4 +1,5 @@
 <a name="readme-top"></a>
+
 ### Javascript-API-Capstone-Project
 
 # 📗 Table of Contents
@@ -18,8 +19,6 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
-
-<!-- PROJECT DESCRIPTION -->
 
 # 📖 [Meal-App-using-API] <a name="about-project"></a>
 
@@ -69,6 +68,7 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+- [Walkthrough Video](https://drive.google.com/file/d/1h4LguA7PzH3N29moBlTFeM7GuN_YHS3t/view?usp=sharing)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -89,9 +89,11 @@ In order to run this project you need:
 To get a local copy up and running follow these simple example steps.
 
 - Clone the repository using:
+
 ```
    https://github.com/chepkok3/Module-2-Capstone-Project.git
 ```
+
 ### Install
 
 Install this project's dependencies with the following command:
@@ -99,6 +101,7 @@ Install this project's dependencies with the following command:
 - **[npm install]**
 
 ### usage
+
 To run the project, execute the following command:
 
 - **[ npm start ]**
@@ -109,22 +112,22 @@ Run tests
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 👥 Authors <a name="authors"></a>
 
 > Mention all of the collaborators of this project.
-👤 **Authors**
+> 👤 **Authors**
 
 👤 **Shaheryar Abid**
--  GitHub: [@shaheryar0054](https://github.com/Shaheryar0054)
+
+- GitHub: [@shaheryar0054](https://github.com/Shaheryar0054)
 - Twitter: [@sharya0310](https://twitter.com/home)
 - LinkedIn: [@shaheryar](https://www.linkedin.com/in/shaheryar-abid-8758121b3/)
 
 👤 **Stanley Kibor**
+
 - GitHub: [@chepkok3](https://github.com/chepkok3)
 - Twitter: [@chepkok3](https://twitter.com/home)
 - LinkedIn: [@chepkok3](https://www.linkedin.com/in/kibor-stanley-350b8a123/)
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -146,12 +149,11 @@ Feel free to check the [issues page](https://github.com/chepkok3/Module-2-Capsto
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## ⭐️ Show your support <a name="support"></a>
 
 > Write a message to encourage readers to support your project
 
-If you like this project please give me stars rating 
+If you like this project please give me stars rating
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -165,7 +167,6 @@ If you like this project please give me stars rating
 - Hat tip to anyone whose code was used.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 📝 License <a name="license"></a>
 
