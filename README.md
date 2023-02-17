@@ -116,12 +116,11 @@ Run tests
 👤 **Authors**
 
 👤 **Shaheryar Abid**
-
 -  GitHub: [@shaheryar0054](https://github.com/Shaheryar0054)
 - Twitter: [@sharya0310](https://twitter.com/home)
 - LinkedIn: [@shaheryar](https://www.linkedin.com/in/shaheryar-abid-8758121b3/)
-👤 **Stanley Kibor**
 
+👤 **Stanley Kibor**
 - GitHub: [@chepkok3](https://github.com/chepkok3)
 - Twitter: [@chepkok3](https://twitter.com/home)
 - LinkedIn: [@chepkok3](https://www.linkedin.com/in/kibor-stanley-350b8a123/)
