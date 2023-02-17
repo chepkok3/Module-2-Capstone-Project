@@ -22,13 +22,11 @@ const displayModal = async (idMeal) => {
       <div class="modal-popup">
         <i class="fa-solid fa-xmark close"></i>
         <div class="modal-info">
-          <img src=${
-  meal.meals[0].strMealThumb
+          <img src=${meal.meals[0].strMealThumb
 } alt="Thumbnail" class="modal-popup-img">  
           <h3 class="meal-title">${meal.meals[0].strMeal}</h3>
           <div class="more-info-links">
-            <button> <a href="${
-  meal.meals[0].strSource
+            <button> <a href="${meal.meals[0].strSource
 }" target="_blank"> Source</a></button>
             
           </div>
@@ -58,8 +56,7 @@ const displayModal = async (idMeal) => {
   
         <h3 class="counter">Comments(<b class="total-comments">0</b>)</h3> 
         <div class='user-comments'> 
-        ${
-  commentsList
+        ${commentsList
     ? commentsList
       .map(
         (comment) => `
