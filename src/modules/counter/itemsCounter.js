@@ -1,5 +1,5 @@
 const ItemsCounter = () => {
-  const mealsEl = document.querySelectorAll('.meals-section > div');
+  const mealsEl = document.querySelectorAll('.meals-container > div');
   return mealsEl.length;
 };
 

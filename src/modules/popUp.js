@@ -1,7 +1,7 @@
 import { postComment, getComments } from './commentsAPI.js';
 import commentsCounter from './counter/commentCounter.js';
 
-const getMealDetail = async (idMeal) => {
+const mealInfo = async (idMeal) => {
   const response = await fetch(
     `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`,
   );
@@ -9,15 +9,15 @@ const getMealDetail = async (idMeal) => {
   return responseJSON;
 };
 
-const popUpSection = document.querySelector('.popup-section');
+const popUpWindow = document.querySelector('.popup-window');
 const parser = new DOMParser();
 
 const displayModal = async (idMeal) => {
-  popUpSection.innerHTML = '<div class="backdrop"></div>';
+  popUpWindow.innerHTML = '<div class="backdrop"></div>';
 
   const commentsList = await getComments(idMeal);
 
-  getMealDetail(idMeal).then((meal) => {
+  mealInfo(idMeal).then((meal) => {
     const string = `
     <div class="popup-container">
       <div class="modal-popup">
@@ -58,8 +58,8 @@ const displayModal = async (idMeal) => {
           </div>
         </div>
 
-        <h3 class="counter">Comments(<b class="total-comments">0</b>)</h3>  
-        <div class='meal-comments'> 
+        <h3 class="counter">Comments(<b class="all-comments">0</b>)</h3>  
+        <div class='user-comments'> 
         ${
   commentsList
     ? commentsList
@@ -88,21 +88,21 @@ const displayModal = async (idMeal) => {
         </div>
       </div>`;
 
-    const stringElement = parser.parseFromString(string, 'text/html').body
+    const stringItem = parser.parseFromString(string, 'text/html').body
       .firstChild;
-    popUpSection.append(stringElement);
+    popUpWindow.append(stringItem);
 
-    const closeBtn = stringElement.querySelector('.close');
+    const closeBtn = stringItem.querySelector('.close');
     closeBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      popUpSection.classList.add('hidden');
+      popUpWindow.classList.add('hidden');
     });
 
-    const form = stringElement.querySelector('form');
-    const commentSection = document.querySelector('.meal-comments');
-    const commentsCounterEl = stringElement.querySelector('.total-comments');
+    const form = stringItem.querySelector('form');
+    const commentsContainer = document.querySelector('.user-comments');
+    const counterElement = stringItem.querySelector('.all-comments');
 
-    commentsCounterEl.innerHTML = `${commentsCounter()}`;
+    counterElement.innerHTML = `${commentsCounter()}`;
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -114,7 +114,7 @@ const displayModal = async (idMeal) => {
       const dd = String(today.getDate()).padStart(2, '0');
       const mm = String(today.getMonth() + 1).padStart(2, '0');
       const yyyy = today.getFullYear();
-      today = `${mm}/${dd}/${yyyy}`;
+      today = `${dd}/${mm}/${yyyy}`;
 
       const commentString = `
         <div class="comment">
@@ -125,11 +125,11 @@ const displayModal = async (idMeal) => {
         <div class="date">${today}</div>
       </div>`;
 
-      const commentElement = parser.parseFromString(commentString, 'text/html')
+      const userComment = parser.parseFromString(commentString, 'text/html')
         .body.firstChild;
-      commentSection.append(commentElement);
+      commentsContainer.append(userComment);
       form.reset();
-      commentsCounterEl.innerHTML = `${commentsCounter()}`;
+      counterElement.innerHTML = `${commentsCounter()}`;
     });
   });
 };

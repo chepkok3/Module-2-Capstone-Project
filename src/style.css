@@ -35,7 +35,7 @@ ul {
   border-radius: 10px;
 }
 
-.meals-section {
+.meals-container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -231,7 +231,7 @@ h3 {
 .tag {
   align-items: center;
   letter-spacing: 2px;
-  color: #d2d1d3;
+  color: black;
   margin-left: 6px;
 }
 
@@ -247,7 +247,7 @@ h3 {
 }
 
 .comment b {
-  color: #e1362c;
+  color: black;
   letter-spacing: 3px;
   font-size: 1.2em;
   filter: drop-shadow(2px 4px 6px black);

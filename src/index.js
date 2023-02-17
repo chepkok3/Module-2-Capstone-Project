@@ -4,15 +4,15 @@ import getMeals from './modules/getMeals.js';
 import { getLikes, postLike } from './modules/getLikes.js';
 import ItemsCounter from './modules/counter/itemsCounter.js';
 
-const mealsSection = document.querySelector('.meals-section');
-const popUpSection = document.querySelector('.popup-section');
+const mealsContainer = document.querySelector('.meals-container');
+const popUpWindow = document.querySelector('.popup-window');
 const parser = new DOMParser();
 
-const init = async () => {
+const initAll = async () => {
   const likesArray = await getLikes();
   const mealsArray = await getMeals();
 
-  const combinedArray = mealsArray.meals.map((meal) => {
+  const allArrays = mealsArray.meals.map((meal) => {
     const likeForThisMeal = likesArray.filter(
       (likeObj) => likeObj.item_id === meal.idMeal,
     );
@@ -24,7 +24,7 @@ const init = async () => {
     };
   });
 
-  combinedArray.forEach((mealWithLike) => {
+  allArrays.forEach((mealWithLike) => {
     const string = `
       <div class="Loaded-content">
         <img src="${mealWithLike.strMealThumb}" alt="meal" class="meal-img">
@@ -40,11 +40,11 @@ const init = async () => {
         </div>
       </div>`;
 
-    const stringElement = parser.parseFromString(string, 'text/html').body
+    const stringItem = parser.parseFromString(string, 'text/html').body
       .firstChild;
 
-    const likeBtn = stringElement.querySelector('.like-btn');
-    const likeEl = stringElement.querySelector('.likes');
+    const likeBtn = stringItem.querySelector('.like-btn');
+    const likeEl = stringItem.querySelector('.likes');
 
     likeBtn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -56,12 +56,12 @@ const init = async () => {
       likeEl.style.color = '#e1362c';
     });
 
-    mealsSection.append(stringElement);
+    mealsContainer.append(stringItem);
 
-    const commentbtn = stringElement.querySelector('.comment-btn');
+    const commentbtn = stringItem.querySelector('.comment-btn');
     commentbtn.addEventListener('click', (e) => {
       e.preventDefault();
-      popUpSection.classList.remove('hidden');
+      popUpWindow.classList.remove('hidden');
       displayModal(mealWithLike.idMeal);
     });
   });
@@ -70,4 +70,4 @@ const init = async () => {
   itemsCounterEl.innerHTML = `(${totalItems})`;
 };
 
-init();
+initAll();
