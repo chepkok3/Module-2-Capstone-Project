@@ -5,28 +5,28 @@
 import ItemCounter from '../counter/itemsCounter.js';
 
 describe('ItemCounter', () => {
-  let mealsSection;
+  let mealsContainer;
 
   beforeEach(() => {
-    mealsSection = document.createElement('div');
-    mealsSection.classList.add('meals-section');
-    document.body.appendChild(mealsSection);
+    mealsContainer = document.createElement('div');
+    mealsContainer.classList.add('meals-section');
+    document.body.appendChild(mealsContainer);
   });
 
   afterEach(() => {
-    mealsSection.remove();
+    mealsContainer.remove();
   });
 
   test('should count elements if .meals-section is present', () => {
-    mealsSection.innerHTML = '<div>meal1</div>';
+    mealsContainer.innerHTML = '<div>meal1</div>';
     expect(ItemCounter()).toBe(1);
 
-    mealsSection.innerHTML = '<div>meal1</div><div>meal2</div>';
+    mealsContainer.innerHTML = '<div>meal1</div><div>meal2</div>';
     expect(ItemCounter()).toBe(2);
   });
 
   test('should return 0 if .meals-section is not present', () => {
-    mealsSection.remove();
+    mealsContainer.remove();
     expect(ItemCounter()).toBe(0);
   });
 });
