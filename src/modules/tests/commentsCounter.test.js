@@ -5,15 +5,15 @@
 import commentsCounter from '../counter/commentCounter.js';
 
 describe('commentsCounter', () => {
-  test('counts elements when .meal-comments is present', () => {
-    document.body.innerHTML = "<div class='meal-comments'> </div>";
+  test('counts elements when .user-comments is present', () => {
+    document.body.innerHTML = "<div class='user-comments'> </div>";
     expect(commentsCounter()).toBe(0);
 
-    document.body.innerHTML = '<div class="meal-comments"><div>comment</div></div>';
+    document.body.innerHTML = '<div class="user-comments"><div>comment</div></div>';
     expect(commentsCounter()).toBe(1);
   });
 
-  test('returns 0 when .meal-comments is not present', () => {
+  test('returns 0 when .user-comments is not present', () => {
     document.body.innerHTML = '';
     expect(commentsCounter()).toBe(0);
   });
