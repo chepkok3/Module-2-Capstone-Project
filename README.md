@@ -4,33 +4,31 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#In this project we build simple Book list application that can add and remove the Books)
-  - [🛠 Built With](#build-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
+- [📖 About the Project](#about-project)
+- [🛠 Built With](#built-with)
+  - [Key Features](#key-features)
+- [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
   - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 # 📖 [Meal-App-using-API] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-
-**[Meal-App-using-API]** In this project we build simple application that have ability to add and remove books
+**[Meal-App-using-API]** This is an API based meals app that displays various types of food prepared and ready to be served to customers in a restaurant. The app user can leaves comments about the food and like them.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>Client</summary>
@@ -50,8 +48,6 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
 - **[Build-Home-page-fetching-data-from-API]**
 - **[used-involvement-API-to-Add-Likes-Comments]**
 - **[Testing-with-jest]**
@@ -62,17 +58,16 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
 - [Live Demo Link](https://fantastic-valkyrie-d237e9.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+
 - [Walkthrough Video](https://drive.google.com/file/d/1h4LguA7PzH3N29moBlTFeM7GuN_YHS3t/view?usp=sharing)
 
-## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
+## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
 
@@ -114,7 +109,6 @@ Run tests
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
 > 👤 **Authors**
 
 👤 **Shaheryar Abid**
@@ -133,8 +127,6 @@ Run tests
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
 - [Used webpack] **[new_feature_1]**
 - [Used API to fetch data] **[new_feature_2]**
 - [CSS is loaded by Webpack Style/CSS Loader] **[new_feature_3]**
@@ -151,15 +143,12 @@ Feel free to check the [issues page](https://github.com/chepkok3/Module-2-Capsto
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
 
 If you like this project please give me stars rating
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-> Give credit to everyone who inspired your codebase.
 
 - Thanks to the Microverse team for the great curriculum.
 - Thanks to the Code Reviewer(s) for the insightful feedback.
