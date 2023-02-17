@@ -9,7 +9,7 @@ describe('ItemCounter', () => {
 
   beforeEach(() => {
     mealsContainer = document.createElement('div');
-    mealsContainer.classList.add('meals-section');
+    mealsContainer.classList.add('meals-container');
     document.body.appendChild(mealsContainer);
   });
 
@@ -17,7 +17,7 @@ describe('ItemCounter', () => {
     mealsContainer.remove();
   });
 
-  test('should count elements if .meals-section is present', () => {
+  test('should count elements if .meals-container is present', () => {
     mealsContainer.innerHTML = '<div>meal1</div>';
     expect(ItemCounter()).toBe(1);
 
@@ -25,7 +25,7 @@ describe('ItemCounter', () => {
     expect(ItemCounter()).toBe(2);
   });
 
-  test('should return 0 if .meals-section is not present', () => {
+  test('should return 0 if .meals-container is not present', () => {
     mealsContainer.remove();
     expect(ItemCounter()).toBe(0);
   });
