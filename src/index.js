@@ -40,11 +40,11 @@ const init = async () => {
         </div>
       </div>`;
 
-    const stringItem = parser.parseFromString(string, 'text/html').body
+    const stringElement = parser.parseFromString(string, 'text/html').body
       .firstChild;
 
-    const likeBtn = stringItem.querySelector('.like-btn');
-    const likeEl = stringItem.querySelector('.likes');
+    const likeBtn = stringElement.querySelector('.like-btn');
+    const likeEl = stringElement.querySelector('.likes');
 
     likeBtn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -56,9 +56,9 @@ const init = async () => {
       likeEl.style.color = '#e1362c';
     });
 
-    mealsSection.append(stringItem);
+    mealsSection.append(stringElement);
 
-    const commentbtn = stringItem.querySelector('.comment-btn');
+    const commentbtn = stringElement.querySelector('.comment-btn');
     commentbtn.addEventListener('click', (e) => {
       e.preventDefault();
       popUpSection.classList.remove('hidden');

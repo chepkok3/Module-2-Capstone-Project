@@ -1,11 +1,12 @@
 import { postComment, getComments } from './commentsAPI.js';
+import commentsCounter from './counter/commentCounter.js';
 
-const mealInfo = async (idMeal) => {
-  const information = await fetch(
+const getMealDetail = async (idMeal) => {
+  const response = await fetch(
     `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`,
   );
-  const infoJSON = await information.json();
-  return infoJSON;
+  const responseJSON = await response.json();
+  return responseJSON;
 };
 
 const popUpSection = document.querySelector('.popup-section');
@@ -16,51 +17,55 @@ const displayModal = async (idMeal) => {
 
   const commentsList = await getComments(idMeal);
 
-  mealInfo(idMeal).then((meal) => {
+  getMealDetail(idMeal).then((meal) => {
     const string = `
     <div class="popup-container">
       <div class="modal-popup">
         <i class="fa-solid fa-xmark close"></i>
         <div class="modal-info">
-          <img src=${meal.meals[0].strMealThumb
+          <img src=${
+  meal.meals[0].strMealThumb
 } alt="Thumbnail" class="modal-popup-img">  
-          <h3 class="meal-title">${meal.meals[0].strMeal}</h3>
+          <h3 class="game-title">${meal.meals[0].strMeal}</h3>
           <div class="more-info-links">
-            <button> <a href="${meal.meals[0].strSource
-}" target="_blank"> Source</a></button>
-            
+            <button> <a href="${meal.meals[0].strSource}"> Source</a></button>
+            <button> <a href="${meal.meals[0].strYoutube}"> Youtube</a></button>
           </div>
           <div class="meal-description">    
             <p><b> Food Ingredients </b></p>
             <ul>
-              <li>${meal.meals[0].strIngredient1}: 
-              ${meal.meals[0].strMeasure1}</li>
-              <li>${meal.meals[0].strIngredient2}: 
-              ${meal.meals[0].strMeasure2}</li>
-              <li>${meal.meals[0].strIngredient3}: 
-              ${meal.meals[0].strMeasure3}</li>
-              <li>${meal.meals[0].strIngredient4}: 
-              ${meal.meals[0].strMeasure4}</li>
-              <li>${meal.meals[0].strIngredient5}: 
-              ${meal.meals[0].strMeasure5}</li>
+              <li>${meal.meals[0].strIngredient1}: ${
+  meal.meals[0].strMeasure1
+}</li>
+              <li>${meal.meals[0].strIngredient2}: ${
+  meal.meals[0].strMeasure2
+}</li>
+              <li>${meal.meals[0].strIngredient3}: ${
+  meal.meals[0].strMeasure3
+}</li>
+              <li>${meal.meals[0].strIngredient4}: ${
+  meal.meals[0].strMeasure4
+}</li>
+              <li>${meal.meals[0].strIngredient5}: ${
+  meal.meals[0].strMeasure5
+}</li>
             </ul>
             <p><b>Recipe</b></p>
             <p>${meal.meals[0].strInstructions}</p>  
-            <div class="tags"> <b>Tags:</b> 
-            ${(meal.meals[0].strTags || '')
+            <div class="tags"> <b>Tags:</b> ${(meal.meals[0].strTags || '')
     .split(',')
-    .map((el) => `<code class='tag'>${el}</code>`)}
-              </div>
+    .map((el) => `<code class='tag'>${el}</code>`)}</div>
           </div>
         </div>
-  
-        <h3 class="counter">Comments(<b class="total-comments">0</b>)</h3> 
-        <div class='user-comments'> 
-        ${commentsList
+
+        <h3 class="counter">Comments(<b class="total-comments">0</b>)</h3>  
+        <div class='meal-comments'> 
+        ${
+  commentsList
     ? commentsList
       .map(
         (comment) => `
-          <div class="comment-holder">
+          <div class="comment">
             <div class="commented">
               <div class="username"><b>${comment.username}:</b></div>
               <div class="message">${comment.comment}</div>
@@ -72,6 +77,7 @@ const displayModal = async (idMeal) => {
       .join('')
     : ''
 }
+        
         </div>
           <h3>Input your Comment</h3>
           <form class="comments-posted">
@@ -82,18 +88,21 @@ const displayModal = async (idMeal) => {
         </div>
       </div>`;
 
-    const stringItem = parser.parseFromString(string, 'text/html').body
+    const stringElement = parser.parseFromString(string, 'text/html').body
       .firstChild;
-    popUpSection.append(stringItem);
+    popUpSection.append(stringElement);
 
-    const closeBtn = stringItem.querySelector('.close');
+    const closeBtn = stringElement.querySelector('.close');
     closeBtn.addEventListener('click', (e) => {
       e.preventDefault();
       popUpSection.classList.add('hidden');
     });
 
-    const form = stringItem.querySelector('form');
-    const commentsContainer = document.querySelector('.meal-comments');
+    const form = stringElement.querySelector('form');
+    const commentSection = document.querySelector('.meal-comments');
+    const commentsCounterEl = stringElement.querySelector('.total-comments');
+
+    commentsCounterEl.innerHTML = `${commentsCounter()}`;
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -107,8 +116,8 @@ const displayModal = async (idMeal) => {
       const yyyy = today.getFullYear();
       today = `${mm}/${dd}/${yyyy}`;
 
-      const commentsString = `
-        <div class="comment-holder">
+      const commentString = `
+        <div class="comment">
           <div class="commented">
             <div class="username"><b>${user}:</b></div>
             <div class="message">${message}</div>
@@ -116,10 +125,11 @@ const displayModal = async (idMeal) => {
         <div class="date">${today}</div>
       </div>`;
 
-      const commentItem = parser.parseFromString(commentsString, 'text/html')
+      const commentElement = parser.parseFromString(commentString, 'text/html')
         .body.firstChild;
-      commentsContainer.append(commentItem);
+      commentSection.append(commentElement);
       form.reset();
+      commentsCounterEl.innerHTML = `${commentsCounter()}`;
     });
   });
 };

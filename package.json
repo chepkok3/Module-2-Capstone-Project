@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KanzaTahreem/The-MealDB.git"
+    "url": "git+https://github.com/chepkok3/Module-2-Capstone-Project"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KanzaTahreem/The-MealDB/issues"
+    "url": "https://github.com/chepkok3/Module-2-Capstone-Project"
   },
-  "homepage": "https://github.com/KanzaTahreem/The-MealDB#readme",
+  "homepage": "https://github.com/chepkok3/Module-2-Capstone-Project",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.18.6",
     "babel-eslint": "^10.1.0",
