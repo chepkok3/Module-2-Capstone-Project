@@ -1,6 +1,6 @@
 const postComment = async (itemId, name, message) => {
   const response = await fetch(
-    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/YDk6ZvYJ9bRgBt60cLN9/comments',
+    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/4gg2lZ1zSqYloD1ZmP4A/comments',
     {
       method: 'POST',
       body: JSON.stringify({
@@ -19,7 +19,7 @@ const postComment = async (itemId, name, message) => {
 
 const getComments = async (itemId) => {
   const response = await fetch(
-    `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/YDk6ZvYJ9bRgBt60cLN9/comments?item_id=${itemId}`,
+    `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/4gg2lZ1zSqYloD1ZmP4A/comments?item_id=${itemId}`,
   );
   if (response.status === 200) {
     const responseJSON = await response.json();
