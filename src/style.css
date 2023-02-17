@@ -123,12 +123,13 @@ h1 {
 }
 
 p {
-  font-family: 'Roboto', sans-serif; 
+  font-family: 'Roboto', sans-serif;
 }
 
 .items-counter {
   color: red;
 }
+
 /* comments-styling */
 .popup-container {
   display: flex;
@@ -192,7 +193,7 @@ h3 {
 }
 
 .meal-description b {
-  color: #000000;
+  color: #000;
   letter-spacing: 6px;
   font-size: 1.3em;
 }
@@ -218,7 +219,7 @@ h3 {
 .meal-description li {
   letter-spacing: 3px;
   font-style: italic;
-  color: #000000;
+  color: #000;
 }
 
 .tags,
@@ -267,7 +268,7 @@ form {
 
 form > input,
 form > textarea {
-  border: 1px solid #000000;
+  border: 1px solid #000;
   border-radius: 6px;
   padding: 1em;
 }
@@ -282,7 +283,7 @@ form > textarea {
 
 .submit-btn {
   height: 3rem;
-  color: #000000;
+  color: #000;
   font-size: 20px;
   cursor: pointer;
 }
