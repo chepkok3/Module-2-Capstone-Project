@@ -22,4 +22,3 @@ const getLikes = async () => {
 };
 
 export { postLike, getLikes };
-
